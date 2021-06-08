@@ -1,6 +1,6 @@
-{
-    "plugins": [
-      "react"
-    ],
-    "extends": ["eslint:all", "plugin:react/all"]
-  }
+// {
+//     "plugins": [
+//       "react"
+//     ],
+//     "extends": ["eslint:all", "plugin:react/all"]
+//   }
