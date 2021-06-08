@@ -1,15 +1,11 @@
 import React from "react";
-import { Todo, ToggleComplete } from "./types";
 import { TodoListItem } from "./TodoListItem";
 
-interface TodoListProps {
-  todos: Array<Todo>;
-  toggleComplete: ToggleComplete;
-}
 
 export const TodoList: React.FC<TodoListProps> = ({
   todos,
-  toggleComplete
+  toggleComplete,
+  deleteTodo
 }) => {
   return (
     <ul>
@@ -18,6 +14,7 @@ export const TodoList: React.FC<TodoListProps> = ({
           key={todo.text}
           todo={todo}
           toggleComplete={toggleComplete}
+          deleteTodo={deleteTodo}
         />
       ))}
     </ul>

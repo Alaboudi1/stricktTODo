@@ -1,11 +1,9 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
-import { AddTodo } from "./types";
-
-interface AddTodoFormProps {
+type AddTodoFormProps = {
   addTodo: AddTodo;
 }
 
-export const AddTodoForm: React.FC<AddTodoFormProps> = ({ addTodo }) => {
+export const AddTodoForm: React.FC<AddTodoFormProps> = ({ addTodo  }) => {
   const [newTodo, setNewTodo] = useState<string>("");
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -19,7 +17,7 @@ export const AddTodoForm: React.FC<AddTodoFormProps> = ({ addTodo }) => {
   };
 
   return (
-    <form>
+    <form >
       <input type="text" value={newTodo} onChange={handleChange} />
       <button type="submit" onClick={handleSubmit}>
         Add Todo
